@@ -1,10 +1,17 @@
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
-</head>
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Registro</ion-title>
+        <ion-buttons slot="start">
+        <ion-back-button default-href="login"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
 <body>
+   <br>
+    <br>
+    <br>
+    <br>
     <form (ngSubmit)="onSubmit()">
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" [(ngModel)]="registroUsuario.email" required><br>
