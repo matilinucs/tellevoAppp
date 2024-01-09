@@ -47,7 +47,11 @@ export class LoginPage implements OnInit {
     }
   }
 
- 
-  
+  irARegistro(): void {
+    // Redirige a la página de registro
+    this.router.navigate(['/register']);
+  }
+
+
 
 }
