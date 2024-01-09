@@ -1,13 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <form (ngSubmit)="iniciarSesion()">
+  <input type="email" [(ngModel)]="registroUsuario.email" name="email" placeholder="Email" required>
+  <input type="password" [(ngModel)]="registroUsuario.password" name="password" placeholder="Contraseña" required>
+ <br> <button type="submit">Iniciar Sesión</button>
+</form>
+</body>
