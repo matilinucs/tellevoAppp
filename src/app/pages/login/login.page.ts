@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; // Importar Router
 import { RegistroUsuario } from 'src/app/interface';
-
+import { UserDataService } from 'src/app/user-data.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,6 @@ import { RegistroUsuario } from 'src/app/interface';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
 
   registroUsuario: RegistroUsuario = {
     // Inicializa tus propiedades aquí
@@ -23,7 +22,7 @@ export class LoginPage implements OnInit {
     userType: 'pasajero', // O 'conductor', según tu lógica de negocio
   };
 
-  constructor(private router:Router) { }
+  constructor(private router: Router, private userDataService: UserDataService) { } // Inyecta el servicio aquí
 
   ngOnInit() {
     console.log("gkr");
@@ -35,10 +34,12 @@ export class LoginPage implements OnInit {
       const datosUsuario = JSON.parse(usuarioAlmacenado);
       if (datosUsuario.password === this.registroUsuario.password) {
         console.log("Inicio de sesión exitoso");
-        this.router.navigateByUrl('/home'); // Redirige al usuario a /home
 
-        
-        // Aquí puedes implementar la lógica de navegación o manejo de sesión
+        // Almacena los datos del usuario en el servicio
+        this.userDataService.setUserData(datosUsuario);
+
+        // Redirige al usuario a la página de perfil o home
+        this.router.navigateByUrl('/viajes');
       } else {
         console.log("Contraseña incorrecta");
       }
@@ -47,7 +48,7 @@ export class LoginPage implements OnInit {
     }
   }
 
- 
-  
-
+  navegarARegistro() {
+    this.router.navigateByUrl('/register');
+  }
 }

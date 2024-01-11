@@ -5,7 +5,7 @@ const routes: Routes = [
   
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
@@ -17,9 +17,22 @@ const routes: Routes = [
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
+  {
+    path: 'mi-perfil',
+    loadChildren: () => import('./mi-perfil/mi-perfil.module').then( m => m.MiPerfilPageModule)
+  },
+  {
+    path: 'viajes',
+    loadChildren: () => import('./pages/viajes/viajes.module').then( m => m.ViajesPageModule)
+  },
+  {
+    path: 'crear-viaje',
+    loadChildren: () => import('./pages/crear-viaje/crear-viaje.module').then( m => m.CrearViajePageModule)
+  },
+  
 ];
 
 @NgModule({

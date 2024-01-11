@@ -61,5 +61,9 @@ export class RegisterPage {
     await alert.present();
   }
 
+  navegarALogin() {
+    this.router.navigateByUrl('/login');
+  }
+
 }
 

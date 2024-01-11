@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { MiPerfilPageRoutingModule } from './mi-perfil-routing.module';
 
-import { HomePage } from './home.page';
+import { MiPerfilPage } from './mi-perfil.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    MiPerfilPageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [MiPerfilPage]
 })
-export class HomePageModule {}
+export class MiPerfilPageModule {}

@@ -1,0 +1,27 @@
+ion-button {
+    --background: #000; // Color de fondo del botón
+    --color: #fff; // Color del texto del botón
+  
+    &:hover {
+      --background-hover: #333; // Color de fondo del botón al pasar el ratón por encima
+    }
+  
+    &:active {
+      --background-activated: darken(#000, 10%); // Color de fondo del botón al hacer clic
+    }
+  }
+  
+  // Para el botón 'Reservar pasaje' que se expande completamente
+  ion-button[expand="full"] {
+    --background: #000;
+    --color: #fff;
+  
+    &:hover {
+      --background-hover: #333;
+    }
+  
+    &:active {
+      --background-activated: darken(#000, 10%);
+    }
+  }
+  

@@ -1,13 +1,31 @@
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
+    <style>
+        /* Estilos para el botón de regreso */
+        .back-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .back-button:hover {
+            background-color: #333;
+        }
+    </style>
 </head>
 <body>
     <form (ngSubmit)="iniciarSesion()">
-  <input type="email" [(ngModel)]="registroUsuario.email" name="email" placeholder="Email" required>
-  <input type="password" [(ngModel)]="registroUsuario.password" name="password" placeholder="Contraseña" required>
- <br> <button type="submit">Iniciar Sesión</button>
-</form>
+        <input type="email" [(ngModel)]="registroUsuario.email" name="email" placeholder="Email" required>
+        <input type="password" [(ngModel)]="registroUsuario.password" name="password" placeholder="Contraseña" required>
+        <br> <button type="submit">Iniciar Sesión</button>
+        <br> <br>
+    </form>
+
+    <!-- Botón de regreso -->
+    <a href="javascript:history.back()" class="back-button">Volver</a>
 </body>
