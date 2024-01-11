@@ -1,3 +1,4 @@
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,22 @@
         }
     </style>
 </head>
+
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Iniciar Sesión</ion-title>
+        <ion-buttons slot="start">
+        <ion-back-button default-href="register"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
 <body>
+   <br>
+    <br>
+    <br>
+    <br>
     <form (ngSubmit)="iniciarSesion()">
         <input type="email" [(ngModel)]="registroUsuario.email" name="email" placeholder="Email" required>
         <input type="password" [(ngModel)]="registroUsuario.password" name="password" placeholder="Contraseña" required>
