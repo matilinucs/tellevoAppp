@@ -22,15 +22,15 @@ export class ModalViajeComponent {
   }
 
   markPassengerInDestination(passenger: string) {
-    // Agregar al conjunto de pasajeros en destino
-    this.arrivedPassengers.add(passenger);
-  
-    // Verificar si todos los pasajeros están en destino
-    if (this.passengers.every((p) => this.arrivedPassengers.has(p))) {
-      this.showTripCompletedAlert(); // Llamar a la función para mostrar la alerta
-    }
+  // Agregar al conjunto de pasajeros en destino
+  this.arrivedPassengers.add(passenger);
+
+  // Verificar si todos los pasajeros están en destino
+  if (this.passengers.every((p) => this.arrivedPassengers.has(p))) {
+    this.showTripCompletedAlert(); // Llamar a la función para mostrar la alerta
   }
-  
+}
+
 
   isPassengerArrived(passenger: string): boolean {
     // Verificar si el pasajero está en destino
